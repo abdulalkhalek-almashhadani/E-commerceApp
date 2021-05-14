@@ -1,0 +1,78 @@
+﻿@model EcommerceApp1.Vm.BrandsVm;
+
+<!-- ============================================================== -->
+<!-- pageheader  -->
+<!-- ============================================================== -->
+<div class="row">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="page-header" id="top">
+            <h2 class="pageheader-title">Add Brand</h2>
+            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+            <div class="page-breadcrumb">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index", controller:"Home")" class="breadcrumb-link">Home</a></li>
+                        <li class="breadcrumb-item"><a href="@Url.Action("Index", controller:"Brands")" class="breadcrumb-link">Brands</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Add Brand</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ============================================================== -->
+<!-- end pageheader  -->
+<!-- ============================================================== -->
+
+
+
+
+
+<div class="row">
+    <!-- ============================================================== -->
+    <!-- valifation types -->
+    <!-- ============================================================== -->
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header">Add Brand</h5>
+            <div class="card-body">
+                <form method="post" enctype="multipart/form-data" id="validationform" data-parsley-validate="" novalidate="">
+                    <input type="hidden" asp-for="Id" />
+                    <div class="form-group row">
+                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Name</label>
+                        <div class="col-12 col-sm-8 col-lg-6">
+                            <input asp-for="Name" type="text" required="" placeholder="Type something" class="form-control">
+                        </div>
+                    </div>
+
+
+                    <div class="form-group row">
+                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Description</label>
+                        <div class="col-12 col-sm-8 col-lg-6">
+                            <textarea asp-for="Description" asrequired="" class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-12 col-sm-3 col-form-label text-sm-right">Logo</label>
+                        <div class="col-12 col-sm-8 col-lg-6">
+                            <div class="custom-file mb-3">
+                                <input name="File" type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">File Input</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row text-right">
+                        <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+                            <button type="submit" class="btn btn-space btn-primary">Submit</button>
+                            <button class="btn btn-space btn-secondary">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end valifation types -->
+    <!-- ============================================================== -->
+</div>
